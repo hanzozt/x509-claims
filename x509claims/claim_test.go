@@ -85,7 +85,7 @@ func TestConfig_Claims(t *testing.T) {
 			Definitions: []Definition{
 				&DefinitionLMP[string]{
 					Locator: &LocatorSanEmail{},
-					Matcher: &MatcherSuffix{Suffix: "@ziti.dev"},
+					Matcher: &MatcherSuffix{Suffix: "@zt.dev"},
 					Parser:  &ParserSplit{Separator: "."},
 				},
 			},
@@ -95,7 +95,7 @@ func TestConfig_Claims(t *testing.T) {
 		cert := &x509.Certificate{
 			EmailAddresses: []string{
 				"hello@nomatch.com",
-				claim1 + "@ziti.dev",
+				claim1 + "@zt.dev",
 			},
 		}
 
@@ -110,7 +110,7 @@ func TestConfig_Claims(t *testing.T) {
 			Definitions: []Definition{
 				&DefinitionLMP[string]{
 					Locator: &LocatorSanEmail{},
-					Matcher: &MatcherSuffix{Suffix: "@ziti.dev"},
+					Matcher: &MatcherSuffix{Suffix: "@zt.dev"},
 					Parser:  &ParserSplit{Separator: "."},
 				},
 			},
@@ -122,7 +122,7 @@ func TestConfig_Claims(t *testing.T) {
 		cert := &x509.Certificate{
 			EmailAddresses: []string{
 				"hello@nomatch.com",
-				strings.Join([]string{claim1, claim2}, ".") + "@ziti.dev",
+				strings.Join([]string{claim1, claim2}, ".") + "@zt.dev",
 			},
 		}
 
@@ -137,7 +137,7 @@ func TestConfig_Claims(t *testing.T) {
 			Definitions: []Definition{
 				&DefinitionLMP[string]{
 					Locator: &LocatorSanEmail{},
-					Matcher: &MatcherSuffix{Suffix: "@ziti.dev"},
+					Matcher: &MatcherSuffix{Suffix: "@zt.dev"},
 					Parser:  &ParserSplit{Separator: "."},
 				},
 				&DefinitionLMP[string]{
@@ -154,7 +154,7 @@ func TestConfig_Claims(t *testing.T) {
 		cert := &x509.Certificate{
 			EmailAddresses: []string{
 				"hello@nomatch.com",
-				strings.Join([]string{claim1, claim2}, ".") + "@ziti.dev",
+				strings.Join([]string{claim1, claim2}, ".") + "@zt.dev",
 				claim3 + "@other.dev",
 			},
 		}
