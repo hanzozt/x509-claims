@@ -4,7 +4,7 @@ import (
 	"crypto/x509"
 	"encoding/pem"
 	"fmt"
-	"github.com/openziti/x509-claims/x509claims"
+	"github.com/hanzozt/x509-claims/x509claims"
 	"net/url"
 	"os"
 )

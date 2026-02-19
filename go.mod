@@ -1,4 +1,4 @@
-module github.com/openziti/x509-claims
+module github.com/hanzozt/x509-claims
 
 go 1.18
 
